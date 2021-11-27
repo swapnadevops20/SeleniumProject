@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="UserNameTestNG" verbose="1" >
+ 
+ <test name="Test1" >
+ <parameter name="username1Input" value="123456"></parameter>
+ <parameter name="username2Input" value="1234567890"></parameter>
+ <parameter name="username3Input" value="9704584916"></parameter>
+ 
+    <classes>
+       <class name="com.qa.shopclues.Pages.Page" />
+    </classes>
+  </test>
+ 
+    
+     
+</suite>

@@ -16,9 +16,13 @@ public class shopclues_Base {
 		driver.manage().deleteAllCookies();
 		//Thread.sleep(3000);
 		driver.get("https://www.shopclues.com/");
+		
+		//pageload wait time
+				driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+			
 	
 		//Implicit wait for five seconds
-		 driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		// driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
 }
 		

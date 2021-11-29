@@ -3,6 +3,7 @@ package com.qa.shopclues.Tests;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.qa.shopclues.Base.shopclues_Base;
@@ -27,10 +28,11 @@ public class shopclues_LoginPageTest extends shopclues_Base{
 		sp.ValidateTitle();
 	}
 	
+	@Parameters({"uname1Input","uname2Input","uname3Input"})
 	@Test(priority='2', description="Validating Login Input Values")
-	public void LoginTest() throws InterruptedException
+	public void LoginTest(String uname1Input,String uname2Input,String uname3Input) throws InterruptedException
 	{
-		sp.login();
+		sp.login(uname1Input,uname2Input,uname3Input);
 	}
 	
 	@AfterClass

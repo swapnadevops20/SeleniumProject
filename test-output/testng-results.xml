@@ -1,84 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-11-27T09:14:07Z" name="Default suite" finished-at="2021-11-27T09:14:33Z" duration-ms="26123">
+  <suite started-at="2021-11-29T06:29:28Z" name="ShopcluesTesting" finished-at="2021-11-29T06:31:50Z" duration-ms="142411">
     <groups>
     </groups>
-    <test started-at="2021-11-27T09:14:07Z" name="Default test" finished-at="2021-11-27T09:14:33Z" duration-ms="26123">
-      <class name="com.qa.shopclues.Tests.shopclues_MainTest">
-        <test-method signature="setup()[pri:50, instance:com.qa.shopclues.Tests.shopclues_MainTest@1ef6d34c]" started-at="2021-11-27T09:14:07Z" name="setup" description="Login,SearchingShoes,ShoeNamePrice,HeadphoneNamePrice" finished-at="2021-11-27T09:14:33Z" duration-ms="26081" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <a tabindex="5" id="login_via_otp" class="btn orange_white width50 " href="javascript:void(0);" onclick="signupLoginDsktpMngr.doLoginViaOtp(this);">...</a> is not clickable at point (237, 21). Other element would receive the click: <div class="wrapper">...</div>
-  (Session info: chrome=96.0.4664.45)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'WINDOWS-R8SKFHD', ip: '192.168.1.11', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '15.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 95.0.4638.17 (a9d0719444d4b..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:64605}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: be995413b5cdea35f14a8a6246ef92f9]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a tabindex="5" id="login_via_otp" class="btn orange_white width50 " href="javascript:void(0);" onclick="signupLoginDsktpMngr.doLoginViaOtp(this);">...</a> is not clickable at point (237, 21). Other element would receive the click: <div class="wrapper">...</div>
-  (Session info: chrome=96.0.4664.45)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'WINDOWS-R8SKFHD', ip: '192.168.1.11', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '15.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 95.0.4638.17 (a9d0719444d4b..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:64605}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: be995413b5cdea35f14a8a6246ef92f9
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at com.sun.proxy.$Proxy10.click(Unknown Source)
-at com.qa.shopclues.Pages.shopclues_LoginPage.login(shopclues_LoginPage.java:101)
-at com.qa.shopclues.Tests.shopclues_MainTest.setup(shopclues_MainTest.java:26)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+    <test started-at="2021-11-29T06:29:28Z" name="ShopcluesLoginPageTest" finished-at="2021-11-29T06:30:10Z" duration-ms="42492">
+      <class name="com.qa.shopclues.Tests.shopclues_LoginPageTest">
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.qa.shopclues.Tests.shopclues_LoginPageTest@934b6cb]" started-at="2021-11-29T06:29:28Z" name="startBrowser" finished-at="2021-11-29T06:29:35Z" duration-ms="7185" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-      </class> <!-- com.qa.shopclues.Tests.shopclues_MainTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- startBrowser -->
+        <test-method signature="ValidateTitleTest()[pri:49, instance:com.qa.shopclues.Tests.shopclues_LoginPageTest@934b6cb]" started-at="2021-11-29T06:29:35Z" name="ValidateTitleTest" description="Validating Title Test" finished-at="2021-11-29T06:29:35Z" duration-ms="26" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateTitleTest -->
+        <test-method signature="LoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:50, instance:com.qa.shopclues.Tests.shopclues_LoginPageTest@934b6cb]" started-at="2021-11-29T06:29:35Z" name="LoginTest" description="Validating Login Input Values" finished-at="2021-11-29T06:30:10Z" duration-ms="34947" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234567890]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[9704584916]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method is-config="true" signature="closeTest()[pri:0, instance:com.qa.shopclues.Tests.shopclues_LoginPageTest@934b6cb]" started-at="2021-11-29T06:30:10Z" name="closeTest" finished-at="2021-11-29T06:30:10Z" duration-ms="290" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTest -->
+      </class> <!-- com.qa.shopclues.Tests.shopclues_LoginPageTest -->
+    </test> <!-- ShopcluesLoginPageTest -->
+    <test started-at="2021-11-29T06:30:10Z" name="ShopcluesSearchShoesPageTest" finished-at="2021-11-29T06:30:40Z" duration-ms="29154">
+      <class name="com.qa.shopclues.Tests.shopclues_SearchShoesTest">
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.qa.shopclues.Tests.shopclues_SearchShoesTest@4eaf3684]" started-at="2021-11-29T06:30:10Z" name="startBrowser" finished-at="2021-11-29T06:30:17Z" duration-ms="6607" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="ValidateTitleTest()[pri:49, instance:com.qa.shopclues.Tests.shopclues_SearchShoesTest@4eaf3684]" started-at="2021-11-29T06:30:17Z" name="ValidateTitleTest" description="Validating Title Test" finished-at="2021-11-29T06:30:17Z" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateTitleTest -->
+        <test-method signature="LoginTest(java.lang.String)[pri:50, instance:com.qa.shopclues.Tests.shopclues_SearchShoesTest@4eaf3684]" started-at="2021-11-29T06:30:17Z" name="LoginTest" description="Validating Login Input Values" finished-at="2021-11-29T06:30:37Z" duration-ms="20462" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Nike Shoes]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method is-config="true" signature="closeTest()[pri:0, instance:com.qa.shopclues.Tests.shopclues_SearchShoesTest@4eaf3684]" started-at="2021-11-29T06:30:37Z" name="closeTest" finished-at="2021-11-29T06:30:40Z" duration-ms="2068" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTest -->
+      </class> <!-- com.qa.shopclues.Tests.shopclues_SearchShoesTest -->
+    </test> <!-- ShopcluesSearchShoesPageTest -->
+    <test started-at="2021-11-29T06:30:40Z" name="ShopcluesShoeNamePricePageTest" finished-at="2021-11-29T06:31:17Z" duration-ms="37871">
+      <class name="com.qa.shopclues.Tests.shopclues_ShoeNamePriceTest">
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.qa.shopclues.Tests.shopclues_ShoeNamePriceTest@2ce6c6ec]" started-at="2021-11-29T06:30:40Z" name="startBrowser" finished-at="2021-11-29T06:30:47Z" duration-ms="7680" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="ValidateTitleTest()[pri:49, instance:com.qa.shopclues.Tests.shopclues_ShoeNamePriceTest@2ce6c6ec]" started-at="2021-11-29T06:30:47Z" name="ValidateTitleTest" description="Validating Title Test" finished-at="2021-11-29T06:30:47Z" duration-ms="20" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateTitleTest -->
+        <test-method signature="shoeNamePriceTest(java.lang.String)[pri:50, instance:com.qa.shopclues.Tests.shopclues_ShoeNamePriceTest@2ce6c6ec]" started-at="2021-11-29T06:30:47Z" name="shoeNamePriceTest" description="Validating Login Input Values" finished-at="2021-11-29T06:31:15Z" duration-ms="28071" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Nike Shoes]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shoeNamePriceTest -->
+        <test-method is-config="true" signature="closeTest()[pri:0, instance:com.qa.shopclues.Tests.shopclues_ShoeNamePriceTest@2ce6c6ec]" started-at="2021-11-29T06:31:15Z" name="closeTest" finished-at="2021-11-29T06:31:17Z" duration-ms="2085" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTest -->
+      </class> <!-- com.qa.shopclues.Tests.shopclues_ShoeNamePriceTest -->
+    </test> <!-- ShopcluesShoeNamePricePageTest -->
+    <test started-at="2021-11-29T06:31:17Z" name="ShopcluesSearchHeadphonesPageTest" finished-at="2021-11-29T06:31:50Z" duration-ms="32753">
+      <class name="com.qa.shopclues.Tests.shopclues_SearchHeadphonesTest">
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.qa.shopclues.Tests.shopclues_SearchHeadphonesTest@50dfbc58]" started-at="2021-11-29T06:31:17Z" name="startBrowser" finished-at="2021-11-29T06:31:24Z" duration-ms="6655" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="ValidateTitleTest()[pri:49, instance:com.qa.shopclues.Tests.shopclues_SearchHeadphonesTest@50dfbc58]" started-at="2021-11-29T06:31:24Z" name="ValidateTitleTest" description="Validating Title Test" finished-at="2021-11-29T06:31:24Z" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateTitleTest -->
+        <test-method signature="headphoneTest(java.lang.String)[pri:50, instance:com.qa.shopclues.Tests.shopclues_SearchHeadphonesTest@50dfbc58]" started-at="2021-11-29T06:31:24Z" name="headphoneTest" description="Validating Login Input Values" finished-at="2021-11-29T06:31:50Z" duration-ms="25993" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[headphones]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- headphoneTest -->
+        <test-method is-config="true" signature="closeTest()[pri:0, instance:com.qa.shopclues.Tests.shopclues_SearchHeadphonesTest@50dfbc58]" started-at="2021-11-29T06:31:50Z" name="closeTest" finished-at="2021-11-29T06:31:50Z" duration-ms="90" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTest -->
+      </class> <!-- com.qa.shopclues.Tests.shopclues_SearchHeadphonesTest -->
+    </test> <!-- ShopcluesSearchHeadphonesPageTest -->
+  </suite> <!-- ShopcluesTesting -->
 </testng-results>

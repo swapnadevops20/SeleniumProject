@@ -2,21 +2,22 @@ package com.qa.shopclues.Tests;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.qa.shopclues.Base.shopclues_Base;
-import com.qa.shopclues.Pages.shoeclues_SearchHeadphonesPage;
+import com.qa.shopclues.Pages.shopclues_SearchHeadphonesPage;
 
 
-public class shoeclues_SearchHeadphonesTest extends shopclues_Base{
+public class shopclues_SearchHeadphonesTest extends shopclues_Base{
 	
-	shoeclues_SearchHeadphonesPage sp3;
+	shopclues_SearchHeadphonesPage sp3;
 	
 	@BeforeClass
 	public void startBrowser()
 	{
 		initialization();
-		sp3=new shoeclues_SearchHeadphonesPage();
+		sp3=new shopclues_SearchHeadphonesPage();
 	}
 			
 	@Test(priority='1', description="Validating Title Test")
@@ -25,10 +26,11 @@ public class shoeclues_SearchHeadphonesTest extends shopclues_Base{
 		sp3.ValidateTitle();
 	}
 	
+	@Parameters({"headphoneInput"})
 	@Test(priority='2', description="Validating Login Input Values")
-	public void shoeNamePriceTest() throws InterruptedException
+	public void headphoneTest(String headphoneInput) throws InterruptedException
 	{
-		sp3.headphoneNamePrice();
+		sp3.headphoneNamePrice(headphoneInput);
 	}
 	
 	@AfterClass

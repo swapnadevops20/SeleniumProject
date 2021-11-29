@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.qa.shopclues.Base.shopclues_Base;
 
-public class shoeclues_SearchHeadphonesPage extends shopclues_Base{
+public class shopclues_SearchHeadphonesPage extends shopclues_Base{
 	
 	// Locate elements 
 	// WebElement e =driver.findelement(By.locatorname("value") 
@@ -31,7 +31,7 @@ public class shoeclues_SearchHeadphonesPage extends shopclues_Base{
 	// initialize the elements that are located 
 	 // use class PageFactory and method initElements, driver object 
 	 	
-	public shoeclues_SearchHeadphonesPage()    //this is not a method , it is a constructor
+	public shopclues_SearchHeadphonesPage()    //this is not a method , it is a constructor
 	{
 		PageFactory.initElements(driver, this); //driver is coming from Base class and this is used to initialize current Elements
 	}
@@ -44,45 +44,29 @@ public class shoeclues_SearchHeadphonesPage extends shopclues_Base{
  		System.out.println(title); 
  	} 
  	
-	//@Parameters({"username1Input","username2Input","username3Input"})
-	//public void login(String username1Input,String username2Input,String username3Input) throws InterruptedException
-	public void headphoneNamePrice() throws InterruptedException
+		public void headphoneNamePrice(String headphoneInput) throws InterruptedException
 	{
 		 //Entering data into search box
-		// WebElement searchText=driver.findElement(By.xpath("//*[@id='autocomplete']"));
 		searchText.clear();
-		 searchText.sendKeys("headphones");
+		 searchText.sendKeys(headphoneInput);
 		Thread.sleep(5000);
 
      //clicking on search Button
 		
-		
-		//WebElement e37= driver.findElement(By.xpath("//*[@id=\"search\"]/input[2]"));
-   // WebElement e37= driver.findElement(By.xpath("//*[@id='search']/a"));
-     e37.click();
+	e37.click();
      
-     //WebElement result=driver.findElement(By.xpath("//*[@id=\"instdcnt\"]"));
-     
-     System.out.println("\n" + "TestCase#1 - The Results of the HeadPhones :" +result.getText());
-     
-     
-    String ts=result.getText();
+    System.out.println("\n" + "TestCase#1 - The Results of the HeadPhones :" +result.getText());
+     String ts=result.getText();
      if(ts.equalsIgnoreCase("O"))
      {
      	System.out.println("\n" + "TestCase#2 - The result is O,So it is not Displaying any Product ");
      }
-
-
-     System.out.println("\n" + "TestCase#2 - The result of the Page is Greater than 0 " );
+System.out.println("\n" + "TestCase#2 - The result of the Page is Greater than 0 " );
      Thread.sleep(3000);
-     
-//WebElement disppage=driver.findElement(By.xpath("//*[@id='product_list']/div[3]/div[2]/a"));
-disppage.click();
-System.out.println("\n" + "TestCase#3 - Displaying the Selected Product Page :\n" +disppage.getText() );
+     disppage.click();
+     System.out.println("\n" + "TestCase#3 - Displaying the Selected Product Page :\n" +disppage.getText() );
 
-
-ArrayList<String> tabs=	new ArrayList<String> (driver.getWindowHandles());
-
+     ArrayList<String> tabs=	new ArrayList<String> (driver.getWindowHandles());
 System.out.println("\n" + "TestCase#4 - Names Of Windows :" +tabs );
 Thread.sleep(5000);
 
@@ -91,13 +75,9 @@ driver.switchTo().window(tabs.get(1));
 Thread.sleep(5000);
 
 //displaying product name
-//WebElement disp1=driver.findElement(By.xpath("//*[@id='main_data']/div[2]/div[2]/h1"));
-
 System.out.println("\n" + "TestCase#5 - The Name of the Product :" +disp1.getText() );
 
 //displaying price of the product
-//WebElement disp2= driver.findElement(By.xpath("//*[@id='main_data']/div[2]/div[2]/div[3]/span[1]"));
-
 System.out.println("\n" + "TestCase#6 - The Price of the Product : Rs" +disp2.getText() +"\n" );
 
 			Thread.sleep(3000);

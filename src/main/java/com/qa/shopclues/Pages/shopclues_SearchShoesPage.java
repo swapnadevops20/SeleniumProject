@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.qa.shopclues.Base.shopclues_Base;
 
-public class shoeclues_SearchShoesPage extends shopclues_Base{
+public class shopclues_SearchShoesPage extends shopclues_Base{
 
 //public void login(String username1Input,String username2Input,String username3Input) throws InterruptedException 
 		
@@ -15,6 +15,9 @@ public class shoeclues_SearchShoesPage extends shopclues_Base{
 		// WebElement e =driver.findelement(By.locatorname("value") 
 		// Creating a Object repository 
 		 	
+	@FindBy(xpath="/html/body/div[1]/div/div/div[3]/div[1]/button[1]")
+	WebElement pwin;
+	
 		@FindBy(xpath="//*[@id='autocomplete']")
 		WebElement searchText;
 		@FindBy(xpath="//*[@id='search-result']")
@@ -31,7 +34,7 @@ public class shoeclues_SearchShoesPage extends shopclues_Base{
 		// initialize the elements that are located 
 		 // use class PageFactory and method initElements, driver object 
 		 	
-		public shoeclues_SearchShoesPage()    //this is not a method , it is a constructor
+		public shopclues_SearchShoesPage()    //this is not a method , it is a constructor
 		{
 			PageFactory.initElements(driver, this); //driver is coming from Base class and this is used to initialize current Elements
 		}
@@ -44,15 +47,18 @@ public class shoeclues_SearchShoesPage extends shopclues_Base{
 	 		System.out.println(title); 
 	 	} 
 	 	
-		//@Parameters({"username1Input","username2Input","username3Input"})
-		//public void login(String username1Input,String username2Input,String username3Input) throws InterruptedException
-		public void searchshoes() throws InterruptedException
+		
+		
+		public void searchshoes(String shoenameInput) throws InterruptedException
 		{
+			Thread.sleep(2000);
+			pwin.click();            //popup close
+			
 			 //Entering data into search box
 			 //WebElement searchText=driver.findElement(By.xpath("//*[@id=\"autocomplete\"]"));
 			 System.out.println("\n" + "TestCase#1 - Entering Nike Shoes in Input box " );
 			 searchText.clear();
-			 searchText.sendKeys("Nike Shoes");
+			 searchText.sendKeys(shoenameInput);
 			
 				Thread.sleep(5000);
 			

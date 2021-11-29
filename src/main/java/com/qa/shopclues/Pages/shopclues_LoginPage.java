@@ -69,22 +69,22 @@ public class shopclues_LoginPage extends shopclues_Base{
  		System.out.println(title); 
  	} 
  	
-	//@Parameters({"username1Input","username2Input","username3Input"})
-	//public void login(String username1Input,String username2Input,String username3Input) throws InterruptedException
-	public void login() throws InterruptedException
+	
+	public void login(String uname1Input,String uname2Input,String uname3Input) throws InterruptedException
+	//public void login() throws InterruptedException
 	{
 		Thread.sleep(2000);
 		pwin.click();            //popup close
 		Thread.sleep(2000);
 		 //Click the Sign-in button to open a new window
 		newWindowBtn.click();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		
 		
     //Click on Register Button	
 	System.out.println("\n" + "TestCase#1 - Testing Register Button : " +e1.getText());
 	e1.click();
-	Thread.sleep(5000);
+	Thread.sleep(2000);
 	
 	//Click on Login Button
 	System.out.println("\n" + "TestCase#2 - Testing Login Button : " +e2.getText());
@@ -94,8 +94,8 @@ public class shopclues_LoginPage extends shopclues_Base{
 		//Enter wrong input with 6 digits
 		
 		ulogin1.clear();
-		//ulogin1.sendKeys(username1Input);
-		ulogin1.sendKeys("123456");
+		ulogin1.sendKeys(uname1Input);
+		//ulogin1.sendKeys("123456");
 		Thread.sleep(2000);
 		
 		lotp1.click();
@@ -107,8 +107,8 @@ public class shopclues_LoginPage extends shopclues_Base{
 		//Enter wrong mobile number input with 10 digits
 		
 		ulogin2.clear();
-		//ulogin2.sendKeys(username2Input);
-		ulogin1.sendKeys("1234567890");
+		ulogin2.sendKeys(uname2Input);
+		//ulogin1.sendKeys("1234567890");
 		Thread.sleep(2000);
 		
 		lotp2.click();
@@ -120,8 +120,8 @@ public class shopclues_LoginPage extends shopclues_Base{
 		//Enter Correct Phone number but Account is not register
 		
 		ulogin3.clear();
-		//ulogin3.sendKeys(username3Input);
-		ulogin1.sendKeys("9704584916");
+		ulogin3.sendKeys(uname3Input);
+		//ulogin3.sendKeys("9704584916");
 		Thread.sleep(2000);
 		
 		lotp3.click();

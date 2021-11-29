@@ -17,6 +17,9 @@ public class shopclues_ShoeNamePricePage extends shopclues_Base{
 			// WebElement e =driver.findelement(By.locatorname("value") 
 			// Creating a Object repository 
 			 	
+	@FindBy(xpath="/html/body/div[1]/div/div/div[3]/div[1]/button[1]")
+	WebElement pwin;
+	
 			@FindBy(xpath="//*[@id='autocomplete']")
 			WebElement searchText;
 			@FindBy(xpath="//*[@id='search-result']/li[3]")
@@ -46,43 +49,39 @@ public class shopclues_ShoeNamePricePage extends shopclues_Base{
 		 		System.out.println(title); 
 		 	} 
 		 	
-			//@Parameters({"username1Input","username2Input","username3Input"})
-			//public void login(String username1Input,String username2Input,String username3Input) throws InterruptedException
-			public void shoesNamePrice() throws InterruptedException
+			
+			
+			public void shoesNamePrice(String shoenameInput1) throws InterruptedException
 			{
-				//Entering data into search box
-				 WebElement searchText=driver.findElement(By.xpath("//*[@id=\"autocomplete\"]"));
-				searchText.clear();
-				 searchText.sendKeys("Nike Shoes");
+				Thread.sleep(2000);
+				pwin.click();            //popup close
+				
+				 System.out.println("\n" + "TestCase#1 - Entering Nike Shoes in Input box " );
+				 searchText.clear();
+				 searchText.sendKeys(shoenameInput1);
+				
+					Thread.sleep(5000);
 					
-				//displaying 3rd item in the list box and selecting  on the item
-			       WebElement e36=driver.findElement(By.xpath("//*[@id=\"search-result\"]/li[3]"));
-			       e36.click();
+				   e36.click();
 			       Thread.sleep(3000);
 			       
-			       //Displaying Results of the product
-			       WebElement resultcount=driver.findElement(By.xpath("//*[@id='instdcnt']"));
 			       System.out.println("\n" +"TestCase#1 - Results of the NikeShoes : " +resultcount.getText() );
 			       Thread.sleep(3000);
 
-			       /*
-			       //opening the product list page
-			       WebElement did=driver.findElement(By.xpath("//*[@id='product_list']/div[3]/div[3]"));
-			       System.out.println(did.getText() +"\n");
-			       */
-			  
+			      
 			
 			   //displaying product name
-			   WebElement disp1=driver.findElement(By.xpath("//*[@id='product_list']/div[3]/div[3]/a/h2"));
+			  
 			   System.out.println("\n" + "TestCase#2 - The Name of the Product : " +disp1.getText());
 			   Thread.sleep(3000);
 
 			   //displaying price of the product
-			  WebElement disp2= driver.findElement(By.xpath("//*[@id='product_list']/div[3]/div[3]/a/div[2]/div[1]/span[1]"));
+			 
 			  System.out.println("\n" + "TestCase#3 - The Price of the Product : Rs" +disp2.getText() +"\n");
 			  Thread.sleep(3000);
 
-			  driver.findElement(By.xpath("//*[@id=\"product_list\"]/div[3]/div[3]/a")).click();
+			  //driver.findElement(By.xpath("//*[@id=\"product_list\"]/div[3]/div[3]/a"));
+			  plist.click();
 			  
 			  Thread.sleep(3000);
 			  ArrayList<String> tabs=	new ArrayList<String> (driver.getWindowHandles());

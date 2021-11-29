@@ -1,0 +1,36 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+  
+<suite name="ShopcluesTesting" verbose="1" >
+  <test name="ShopcluesLoginPageTest" >
+    <classes>
+       <class name="com.qa.shopclues.Tests.shopclues_LoginPageTest" />
+       <parameter name="uname1Input" value="123456"></parameter>
+    <parameter name="uname2Input" value="1234567890"></parameter>
+    <parameter name="uname3Input" value="9704584916"></parameter>
+    </classes>
+  </test>
+  
+   <test name="ShopcluesSearchShoesPageTest" >
+    <classes>
+       <class name="com.qa.shopclues.Tests.shopclues_SearchShoesTest" />
+       <parameter name="shoenameInput" value="Nike Shoes"></parameter>
+    </classes>
+  </test>
+ 
+ <test name="ShopcluesShoeNamePricePageTest" >
+    <classes>
+       <class name="com.qa.shopclues.Tests.shopclues_ShoeNamePriceTest" />
+       <parameter name="shoenameInput1" value="Nike Shoes"></parameter>
+    </classes>
+  </test>
+ 
+ <test name="ShopcluesSearchHeadphonesPageTest" >
+    <classes>
+       <class name="com.qa.shopclues.Tests.shopclues_SearchHeadphonesTest" />
+       <parameter name="headphoneInput" value="headphones"></parameter>
+    </classes>
+  </test>
+ 
+  
+</suite>
+
